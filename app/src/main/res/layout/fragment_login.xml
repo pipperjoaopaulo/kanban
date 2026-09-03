@@ -65,6 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Criar Conta"
+                android:id="@+id/criarconta"
                 android:layout_weight="1"
                 android:textAlignment="textStart"
                 android:textColor="@color/white"/>
@@ -73,6 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Recuperar Conta"
+                android:id="@+id/recuperarconta"
                 android:layout_weight="1"
                 android:textAlignment="textEnd"
                 android:textColor="@color/white"/>
@@ -81,8 +83,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:indeterminateTint="@color/white"
-            android:layout_gravity="center"/>
-
+            android:layout_gravity="center"
+            tools:visibility="visible"
+            android:visibility="invisible"/>
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
