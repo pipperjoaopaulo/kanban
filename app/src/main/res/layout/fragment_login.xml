@@ -53,6 +53,7 @@
             app:backgroundTint="@null"
             android:background="@drawable/bg_btn"
             android:text="Login"
+            android:id="@+id/botaologin"
             android:textColor="@color/color_default"
             />
         <LinearLayout

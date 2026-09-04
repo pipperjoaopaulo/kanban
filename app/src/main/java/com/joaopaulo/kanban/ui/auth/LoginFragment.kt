@@ -29,6 +29,9 @@ class LoginFragment : Fragment() {
         initListener()
     }
     private fun initListener(){
+        binding.botaologin.setOnClickListener {
+            findNavController().navigate(R.id.action_global_homeFragment)
+        }
         binding.criarconta.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
