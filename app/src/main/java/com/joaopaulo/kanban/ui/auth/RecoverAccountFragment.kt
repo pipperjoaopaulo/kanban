@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.joaopaulo.kanban.R
 import com.joaopaulo.kanban.databinding.FragmentRecoverAccountBinding
 import com.joaopaulo.kanban.databinding.FragmentRegisterBinding
+import com.joaopaulo.kanban.util.initToolbar
 
 class RecoverAccountFragment : Fragment() {
     private var _binding: FragmentRecoverAccountBinding? = null
@@ -22,6 +23,10 @@ class RecoverAccountFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentRecoverAccountBinding.inflate(inflater, container, false)
         return binding.root
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initToolbar(binding.toolbar)
     }
     override fun onDestroyView() {
         super.onDestroyView()

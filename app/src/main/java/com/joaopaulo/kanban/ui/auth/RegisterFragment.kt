@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.joaopaulo.kanban.R
 import com.joaopaulo.kanban.databinding.FragmentRegisterBinding
 import com.joaopaulo.kanban.databinding.FragmentSplashBinding
+import com.joaopaulo.kanban.util.initToolbar
 
 
 class RegisterFragment : Fragment() {
@@ -23,6 +24,11 @@ class RegisterFragment : Fragment() {
         _binding = FragmentRegisterBinding.inflate(inflater, container, false)
         return binding.root
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initToolbar(binding.toolbar)
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding=null
