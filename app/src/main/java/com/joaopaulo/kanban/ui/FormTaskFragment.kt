@@ -5,27 +5,44 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.joaopaulo.kanban.R
-import com.joaopaulo.kanban.databinding.FormTaskFragmentBinding
+import com.joaopaulo.kanban.databinding.FragmentFormTaskBinding
 import com.joaopaulo.kanban.util.initToolbar
 
 
 class FormTaskFragment : Fragment() {
-    private var _binding: FormTaskFragmentBinding? =null
+    private var _binding: FragmentFormTaskBinding? =null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        _binding= FormTaskFragmentBinding.inflate(inflater,container,false)
+        _binding= FragmentFormTaskBinding.inflate(inflater,container,false)
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initToolbar(binding.toolbar)
+        initListener()
     }
+    private fun initListener(){
+        binding.botaosalvar.setOnClickListener {
+            validardata()
+        }
+    }
+    private fun validardata() {
+        val descricao = binding.editTextDescricao.text.toString().trim()
+
+        if (descricao.isNotBlank()) {
+            Toast.makeText(requireContext(), "Tudo Certo!", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(requireContext(), "Preencha uma descrição!", Toast.LENGTH_SHORT).show()
+        }
+        }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

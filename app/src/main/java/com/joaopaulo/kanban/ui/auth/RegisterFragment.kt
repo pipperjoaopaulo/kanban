@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.joaopaulo.kanban.R
 import com.joaopaulo.kanban.databinding.FragmentRegisterBinding
 import com.joaopaulo.kanban.databinding.FragmentSplashBinding
@@ -27,6 +29,26 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initToolbar(binding.toolbar)
+        initListener()
+    }
+    private fun initListener(){
+        binding.botaoenviar.setOnClickListener {
+            validarData()
+        }
+    }
+    private fun validarData(){
+        val email = binding.edittextemail.text.toString().trim()
+        val senha = binding.edittextsenha.text.toString().trim()
+        if (email.isNotBlank()){
+            if(senha.isNotBlank()){
+                Toast.makeText(requireContext(),"Tudo Certo!", Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(requireContext(),"Preencha sua Senha!", Toast.LENGTH_SHORT).show()
+            }
+        }else{
+            Toast.makeText(requireContext(),"Preencha seu E-mail!", Toast.LENGTH_SHORT).show()
+        }
+
     }
 
     override fun onDestroyView() {
