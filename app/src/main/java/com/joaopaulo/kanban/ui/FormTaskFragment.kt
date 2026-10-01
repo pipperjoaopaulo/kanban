@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.joaopaulo.kanban.R
 import com.joaopaulo.kanban.databinding.FragmentFormTaskBinding
 import com.joaopaulo.kanban.util.initToolbar
+import com.joaopaulo.kanban.util.showBottomSheet
 
 
 class FormTaskFragment : Fragment() {
@@ -39,7 +40,7 @@ class FormTaskFragment : Fragment() {
         if (descricao.isNotBlank()) {
             Toast.makeText(requireContext(), "Tudo Certo!", Toast.LENGTH_SHORT).show()
         } else {
-            Toast.makeText(requireContext(), "Preencha uma descrição!", Toast.LENGTH_SHORT).show()
+           showBottomSheet(message = R.string.description_empty_form_task_fragment)
         }
         }
 

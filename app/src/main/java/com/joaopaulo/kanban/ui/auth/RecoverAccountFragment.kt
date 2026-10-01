@@ -10,6 +10,7 @@ import com.joaopaulo.kanban.R
 import com.joaopaulo.kanban.databinding.FragmentRecoverAccountBinding
 import com.joaopaulo.kanban.databinding.FragmentRegisterBinding
 import com.joaopaulo.kanban.util.initToolbar
+import com.joaopaulo.kanban.util.showBottomSheet
 
 class RecoverAccountFragment : Fragment() {
     private var _binding: FragmentRecoverAccountBinding? = null
@@ -42,7 +43,7 @@ class RecoverAccountFragment : Fragment() {
             if (email.isNotBlank()) {
                 Toast.makeText(requireContext(), "Tudo Certo!", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(requireContext(), "Preencha seu E-mail!", Toast.LENGTH_SHORT).show()
+                showBottomSheet(message = R.string.email_empty)
             }
         }
     }

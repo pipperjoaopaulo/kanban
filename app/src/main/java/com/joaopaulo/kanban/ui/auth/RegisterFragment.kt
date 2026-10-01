@@ -11,6 +11,7 @@ import com.joaopaulo.kanban.R
 import com.joaopaulo.kanban.databinding.FragmentRegisterBinding
 import com.joaopaulo.kanban.databinding.FragmentSplashBinding
 import com.joaopaulo.kanban.util.initToolbar
+import com.joaopaulo.kanban.util.showBottomSheet
 
 
 class RegisterFragment : Fragment() {
@@ -43,10 +44,10 @@ class RegisterFragment : Fragment() {
             if(senha.isNotBlank()){
                 Toast.makeText(requireContext(),"Tudo Certo!", Toast.LENGTH_SHORT).show()
             }else{
-                Toast.makeText(requireContext(),"Preencha sua Senha!", Toast.LENGTH_SHORT).show()
+                showBottomSheet(message = R.string.password_empty_register_fragment)
             }
         }else{
-            Toast.makeText(requireContext(),"Preencha seu E-mail!", Toast.LENGTH_SHORT).show()
+            showBottomSheet(message = R.string.email_empty_register_fragment)
         }
 
     }

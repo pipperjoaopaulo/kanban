@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.joaopaulo.kanban.R
 import com.joaopaulo.kanban.databinding.FragmentLoginBinding
 import com.joaopaulo.kanban.databinding.FragmentSplashBinding
+import com.joaopaulo.kanban.util.showBottomSheet
 
 
 class LoginFragment : Fragment() {
@@ -47,10 +48,10 @@ class LoginFragment : Fragment() {
             if(senha.isNotBlank()){
                 findNavController().navigate(R.id.action_global_homeFragment)
             }else{
-                Toast.makeText(requireContext(),"Preencha sua Senha!", Toast.LENGTH_SHORT).show()
+                showBottomSheet(message = R.string.password_empty)
             }
         }else{
-            Toast.makeText(requireContext(),"Preencha seu E-mail!", Toast.LENGTH_SHORT).show()
+            showBottomSheet(message = R.string.email_empty)
         }
     }
 
