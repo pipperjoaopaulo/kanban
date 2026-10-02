@@ -52,8 +52,7 @@
                 android:layout_height="48dp"
                 android:hint="Digite seu e-mail"
                 android:inputType="textEmailAddress"
-                android:background="@drawable/bg_edit_text"
-                android:padding="10dp"
+                style="@style/EditTextTheme"
                 android:id="@+id/edittextemail2"
                 android:layout_marginTop="4dp"/>
 

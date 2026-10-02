@@ -43,8 +43,7 @@
                 android:layout_height="48dp"
                 android:hint="Digite seu e-mail"
                 android:inputType="textEmailAddress"
-                android:background="@drawable/bg_edit_text"
-                android:padding="10dp"
+                style="@style/EditTextTheme"
                 android:id="@+id/edittextemail"
                 android:layout_marginTop="4dp"/>
             <TextView
@@ -59,8 +58,7 @@
                 android:layout_height="48dp"
                 android:inputType="textPassword"
                 android:hint="Digite sua senha"
-                android:background="@drawable/bg_edit_text"
-                android:padding="10dp"
+                style="@style/EditTextTheme"
                 android:id="@+id/edittextsenha"
                 android:layout_marginTop="4dp"/>
 
