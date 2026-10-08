@@ -22,7 +22,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nova Tarefa"
+                android:text="@string/new_task_form_task_fragment"
                 android:textColor="@color/white"
                 android:layout_gravity="center_horizontal"/>
 
@@ -72,7 +72,7 @@
                     android:layout_height="48dp"
                     android:buttonTint="@color/black"
                     android:id="@+id/rbTodo"
-                    android:text="A Fazer"
+                    android:text="@string/status_task_todo"
                     android:checked="true"
                     android:theme="@style/MyRadioButton"
                     android:textColor="@color/white"/>
@@ -81,7 +81,7 @@
                     android:layout_height="48dp"
                     android:buttonTint="@color/black"
                     android:id="@+id/rbDoing"
-                    android:text="Fazendo"
+                    android:text="@string/status_task_doing"
                     android:theme="@style/MyRadioButton"
                     android:textColor="@color/white"/>
                 <RadioButton
@@ -89,7 +89,7 @@
                     android:layout_height="48dp"
                     android:buttonTint="@color/black"
                     android:id="@+id/rbDone"
-                    android:text="Feita"
+                    android:text="@string/status_task_done"
                     android:theme="@style/MyRadioButton"
                     android:textColor="@color/white"/>
             </RadioGroup>
@@ -98,10 +98,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/bg_btn"
-                android:text="Salvar"
+                style="@style/ButtonTheme"
+                android:text="@string/save_button_form_task_fragment"
                 android:textAllCaps="false"
-                android:textColor="@color/color_default"
                 app:backgroundTint="@null"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="221dp"

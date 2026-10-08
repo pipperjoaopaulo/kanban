@@ -43,7 +43,7 @@ class RecoverAccountFragment : Fragment() {
             if (email.isNotBlank()) {
                 Toast.makeText(requireContext(), "Tudo Certo!", Toast.LENGTH_SHORT).show()
             } else {
-                showBottomSheet(message = R.string.email_empty)
+                showBottomSheet(message = getString(R.string.email_empty))
             }
         }
     }
