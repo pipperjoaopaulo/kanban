@@ -27,7 +27,7 @@
     <string name="email_empty_register_fragment">Preencha um E-mail válido!</string>
     <string name="password_empty_register_fragment">Preencha uma Senha!</string>
     <string name="text_button_register_fragment">Enviar</string>
-    <string name="text_title_toolbar_account_fragement">Criar conta</string>
+    <string name="text_title_toolbar_account_fragment">Criar conta</string>
 
     <!-- Recover Account Fragment -->
     <string name="text_info_recover_account_fragment">Informe seu e-mail de cadastro para receber \n um link para alteração de conta</string>
@@ -39,6 +39,10 @@
     <string name="new_task_form_task_fragment">Nova Tarefa</string>
     <string name="status_form_task_fragment">Status</string>
     <string name="save_button_form_task_fragment">Salvar</string>
+    <string name="hint_form_task_fragment">Informe sua nova Tarefa</string>
 
-
+    <!--Hints-->
+    <string name="desc_logout">Logout</string>
+    <string name="desc_tabs">Tabs</string>
+    <string name="desc_addtask">Add Task</string>
 </resources>

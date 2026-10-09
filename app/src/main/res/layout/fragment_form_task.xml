@@ -36,7 +36,7 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Descrição"
+                android:text="@string/description_form_task_fragment"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
@@ -45,7 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 style="@style/EditTextTheme"
-                android:hint="Informe sua nova Tarefa"
+                android:hint="@string/hint_form_task_fragment"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textView"/>
@@ -54,7 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Status"
+                android:text="@string/status_form_task_fragment"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextDescricao"/>

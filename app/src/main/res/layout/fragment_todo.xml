@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:backgroundTint="@color/white"
-        android:contentDescription="Add Task"
+        android:contentDescription="@string/desc_addtask"
         android:clickable="true"
         android:tint="@color/color_default"
         app:layout_constraintBottom_toBottomOf="parent"

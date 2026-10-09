@@ -4,4 +4,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green">#74ed11</color>
+    <!-- Color items -->
+    <color name="color_delete">#D10606</color>
+    <color name="color_details">#1A2587</color>
 </resources>
