@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.joaopaulo.kanban.data.model.Task
 import com.joaopaulo.kanban.databinding.ItemTaskBinding
+//tirar anoatçao//
 
 class TaskAdapter(private val taskList:List<Task>): RecyclerView.Adapter<TaskAdapter.MyViewHolder> () {
 
