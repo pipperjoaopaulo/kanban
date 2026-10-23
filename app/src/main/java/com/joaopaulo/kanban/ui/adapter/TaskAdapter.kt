@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.joaopaulo.kanban.data.model.Status
 import com.joaopaulo.kanban.data.model.Task
 import com.joaopaulo.kanban.databinding.ItemTaskBinding
+//tirar anoatçao//
 
 class TaskAdapter(
     private val context: Context  ,
