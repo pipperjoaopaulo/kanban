@@ -5,13 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.joaopaulo.kanban.R
 import com.joaopaulo.kanban.databinding.FragmentDoneBinding
 import com.joaopaulo.kanban.databinding.FragmentRegisterBinding
+import com.joaopaulo.kanban.ui.adapter.TaskAdapter
 
 class DoneFragment : Fragment() {
     private var _binding: FragmentDoneBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var taskAdapter: TaskAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,9 +26,35 @@ class DoneFragment : Fragment() {
         _binding = FragmentDoneBinding.inflate(inflater, container, false)
         return binding.root
     }
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding=null
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initListeners()
+
+        initRecyclerViewTask(getTask())
     }
+
+    private fun initListeners() {
+        binding.floatingActionButton3.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_formTaskFragment)
+        }
+    }
+
+    private fun initRecyclerViewTask(taskList: List<Task>) {
+        taskAdapter = TaskAdapter(requireContext(),taskList)
+        binding.recyclerViewTask3.layoutManager = LinearLayoutManager(requireContext())
+        binding.recyclerViewTask3.setHasFixedSize(true)
+
+        binding.recyclerViewTask3.adapter = taskAdapter
+    }
+
+    private fun getTask() = listOf(
+        Task("10", "Criar uma nova tela pro app",Status.DONE),
+        Task("11", "Criar informações na tela de login",Status.DONE),
+        Task("12", "Pensar em novas funcionalidade do app",Status.DONE),
+        Task("13", "Salvar progresso na nuvem",Status.DONE),
+        Task("14", "Recriar layout da tela de login do app",Status.DONE),
+
+        )
 
 }

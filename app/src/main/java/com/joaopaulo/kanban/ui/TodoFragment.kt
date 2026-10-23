@@ -6,13 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.joaopaulo.kanban.R
 import com.joaopaulo.kanban.databinding.FragmentRegisterBinding
 import com.joaopaulo.kanban.databinding.FragmentTodoBinding
+import com.joaopaulo.kanban.ui.adapter.TaskAdapter
 
 class TodoFragment : Fragment() {
     private var _binding: FragmentTodoBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var taskAdapter: TaskAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,12 +30,29 @@ class TodoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initListeners()
+
+        initRecyclerViewTask(getTask())
     }
     private fun initListeners(){
         binding.floatingActionButton2.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_formTaskFragment)
         }
     }
+    private fun initRecyclerViewTask(taskList: List<Task>){
+        taskAdapter = TaskAdapter(requireContext(),taskList)
+        binding.recyclerViewTask.layoutManager = LinearLayoutManager(requireContext())
+        binding.recyclerViewTask.setHasFixedSize(true)
+
+        binding.recyclerViewTask.adapter = taskAdapter
+    }
+    private fun getTask() = listOf(
+        Task("0", "Criar nova tela do app",Status.TODO),
+        Task("1", "Validar informações na tela de login",Status.TODO),
+        Task("2", "Adicionar nova funcionalidade do app",Status.TODO),
+        Task("3", "Salvar token Localmente",Status.TODO),
+        Task("4", "Criar layout da tela de login do app", Status.TODO),
+
+    )
     override fun onDestroyView() {
         super.onDestroyView()
         _binding=null
