@@ -1,5 +1,5 @@
 package com.joaopaulo.kanban.data.model
-
+//verificar o parcelize//
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 @Parcelize
