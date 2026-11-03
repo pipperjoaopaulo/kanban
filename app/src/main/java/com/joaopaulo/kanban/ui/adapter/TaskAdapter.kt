@@ -13,8 +13,17 @@ import com.joaopaulo.kanban.databinding.ItemTaskBinding
 
 class TaskAdapter(
     private val context: Context  ,
-    private val taskList:List<Task>
+    private val taskList:List<Task> ,
+    private val taskSelected: (Task,Int) -> Unit
 ): RecyclerView.Adapter<TaskAdapter.MyViewHolder> () {
+
+    companion object{
+        val SELECT_BACK:Int = 1
+        val SELECT_REMOVER:Int = 2
+        val SELECT_EDIT:Int = 3
+        val SELECT_DETAILS:Int = 4
+        val SELECT_NEXT:Int = 5
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = ItemTaskBinding.inflate(LayoutInflater.from(parent.context), parent, false)
