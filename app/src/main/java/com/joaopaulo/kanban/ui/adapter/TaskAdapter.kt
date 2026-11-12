@@ -8,6 +8,7 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.joaopaulo.kanban.data.model.Status
 import com.joaopaulo.kanban.data.model.Task
+import com.joaopaulo.kanban.R
 import com.joaopaulo.kanban.databinding.ItemTaskBinding
 //tirar anoatçao//
 

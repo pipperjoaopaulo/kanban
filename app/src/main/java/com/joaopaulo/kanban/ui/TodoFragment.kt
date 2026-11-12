@@ -9,7 +9,9 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.joaopaulo.kanban.R
+import com.joaopaulo.kanban.data.model.Status
 import com.joaopaulo.kanban.databinding.FragmentRegisterBinding
+import com.joaopaulo.kanban.data.model.Task
 import com.joaopaulo.kanban.databinding.FragmentTodoBinding
 import com.joaopaulo.kanban.ui.adapter.TaskAdapter
 

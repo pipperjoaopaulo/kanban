@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.joaopaulo.kanban.R
 import com.joaopaulo.kanban.data.model.Task
+import com.joaopaulo.kanban.data.model.Status
 import com.joaopaulo.kanban.databinding.FragmentDoingBinding
 import com.joaopaulo.kanban.databinding.FragmentRegisterBinding
 import com.joaopaulo.kanban.ui.adapter.TaskAdapter
